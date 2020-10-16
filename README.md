@@ -2,4 +2,4 @@
 
 Ejecutar el comando:
 
-``npm install
+`npm install`
