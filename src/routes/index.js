@@ -1,20 +1,17 @@
 const express = require('express');
 const router = express.Router();
-var ArticleController = require('../controller/article');
+const Controller = require('../controller');
+const multer  = require('multer')
+
+const useStorage = require('../multer/multer');
+const upload = multer({ storage: useStorage })
 
 
-router.get('/', ArticleController.raiz);
-
-// router.post('/add', ArticleController.add);
-
-// router.get('/turn/:id', ArticleController.turn);
+router.get('/', Controller.raiz);
 
 
-// router.get('/edit/:id',ArticleController.edit);
+router.post('/upload', upload.any(), Controller.upload);
 
-// router.post('/edit/:id', ArticleController.postedit);
-
-// router.get('/delete/:id',ArticleController.delete);
 
 
 module.exports = router;
