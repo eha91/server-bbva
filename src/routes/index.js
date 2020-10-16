@@ -10,7 +10,7 @@ const upload = multer({ storage: useStorage })
 router.get('/', Controller.raiz);
 
 
-router.post('/upload', upload.any(), Controller.upload);
+router.post('/upload', upload.single('file'), Controller.upload);
 
 
 

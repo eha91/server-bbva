@@ -4,7 +4,7 @@ var controller = {
     res.send('Server Up');
   },
   upload: async (req, res) => {
-    res.status(200);
+    res.send('upload file')
   }
 };
 
