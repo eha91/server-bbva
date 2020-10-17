@@ -8,7 +8,7 @@ const upload = multer({ storage: useStorage })
 
 
 router.get('/', Controller.raiz);
-
+router.get('/e2e/key', Controller.pkey);
 
 router.post('/upload', upload.single('file'), Controller.upload);
 
